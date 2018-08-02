@@ -1,16 +1,37 @@
 function mostrar()
 {
-	var dia;
+	var planeta;
 
-	dia=prompt("Ingrese dia");
+	planeta=prompt("Ingrese planeta");
 
-	if (dia=="sabado"||dia=="domingo") {
-		alert("buen finde")
-	}else{
-		if (dia=="lunes"||dia=="martes"||dia=="miercoles"||dia=="jueves"||dia=="viernes") {
-			alert("a trabajar");
-		}else{
-			alert("dia no valido");
-		}
+	switch(planeta)
+	{
+		case "tierra":
+
+			alert("Aca vivimos");
+			break;
+
+		case "mercurio":
+		case "venus":
+
+			alert("Aca hace mas calor");
+			break;
+
+		case "marte":
+		case "neptuno":
+		case "saturno":
+		case "jupiter":
+		case "pluton":
+
+			alert("Aca hace mas frio");
+			break;
+
+		default:
+
+			alert("Planeta invalido");
+			break;
 	}
+
+	
+
 }

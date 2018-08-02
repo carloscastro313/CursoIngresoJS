@@ -1,37 +1,48 @@
 function mostrar()
 {
-	var n1;
-	var n2;
-	var r;
+	var numerouno;
+	var numerodos;
 
-	n1=prompt("Primer numero");
-	n2=prompt("Segundo numero");
-
-	n1=parseInt(n1);
-	n2=parseInt(n2);
-
-	if (n1==n2) {
-		
-		r=n1*n2;
+	numerouno=prompt("Ingrese numero");
+	numerodos=prompt("Ingrese numero");
 	
-	}else{
-		if (n1>n2) {
-			
-			r=n1-n2;
+	if (numerouno==numerodos) 
+	{
+		alert(numerouno+numerodos);
+	}else
+	{
 		
-		}else{
-			if (n2>n1) {
+		numerouno=parseInt(numerouno);
+		numerodos=parseInt(numerodos);
+
+		if (numerouno>numerodos) 
+		{
+			
+			var resta;
+
+			resta=numerouno-numerodos;
+
+			alert("La resta es: "+resta);
+
+
+		}else
+		{
+			if (numerodos>numerouno) 
+			{
 				
-				r=n1+n2;
+				var suma;
 
-				if (r>10) {
+				suma=numerouno+numerodos;
 
-					alert("la suma es "+r+ " y supero el 10");
-				}else{
-					alert(r);
+				if (suma>10) 
+				{
+					alert("La suma es "+suma+" y es superios a 10");
+				}else
+				{
+					alert("La suma es "+suma);
 				}
+
 			}
 		}
 	}
-	
 }
