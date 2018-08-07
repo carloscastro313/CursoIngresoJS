@@ -4,8 +4,8 @@ function mostrar()
 	var descuento;
 	var preciofinal;
 
-	precio=prompt("Ingrese el precio");
-	descuento=prompt("Ingrese el descuento");
+	precio=prompt("Ingrese precio");
+	descuento=prompt("Ingrese descuento");
 
 	precio=parseInt(precio);
 	descuento=parseInt(descuento);
@@ -14,3 +14,4 @@ function mostrar()
 
 	document.getElementById('elPrecioFinal').value=preciofinal;
 }
+

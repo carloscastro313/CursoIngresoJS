@@ -13,25 +13,22 @@ function mostrar()
 
 		case "mercurio":
 		case "venus":
-
-			alert("Aca hace mas calor");
-			break;
+		 	
+		 	alert("Aca hace mas calor");
+		 	break;
 
 		case "marte":
-		case "neptuno":
+		case "jupite":
+		case "nepturno":
 		case "saturno":
-		case "jupiter":
-		case "pluton":
+		case "urano":
 
 			alert("Aca hace mas frio");
 			break;
 
 		default:
 
-			alert("Planeta invalido");
+			alert("Este planeta no es valido");
 			break;
 	}
-
-	
-
 }

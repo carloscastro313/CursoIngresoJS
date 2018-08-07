@@ -1,86 +1,71 @@
-/*
-JOSE
-MARIA
-FER
-GER
-SUSANA
-MIRTA
-
-1 SEXO PEOR nota
-2 NOMBRE DEL MAS VIEJO
-3 nota DEL MAS CHICO
-*/
 function mostrar()
 {
 	var nota;
-	var alumno;
 	var sexo;
-	var edad;
-	var edadmayor=0;
-	var edadmenor=100;
-	var peornota=10;
-	var sexobajo;
-	var viejo;
-	var chico;
-	var contador=0;
-	
-	while(contador<6)
-	{
-		alumno=prompt("Nombre");
+	var promedio;
+	var suma;
+	var contador;
 
-		sexo=prompt("sexo");
+	suma=0;
+	promedio=0;
+	varones=0;
+	contador=0;
+
+
+
+	while(contador<5)
+	{
+
+		contador++;
+		
+		nota=prompt("Ingrese nota (0-10)");
+		nota=parseInt(nota);
+
+		while(nota<0||nota>10)
+		{
+			
+			nota=prompt("Reingrese nota (0-10)");
+			nota=parseInt(nota);
+
+		}
+
+		sexo=prompt("Ingrese sexo");
 
 		while(sexo!="f"&&sexo!="m")
 		{
-			sexo=prompt("sexo");
 			
+			sexo=prompt("Reingrese sexo");
+
 		}
 
-		edad=prompt("edad");
-		edad=parseInt(edad);
-
-		while(isNAN!=(edad)||edad>0||edad<100)
-		{
-			edad=prompt("edad");
-			edad=parseInt(edad);
-		}
-
-		nota=prompt("nota");
-		nota=parseInt(nota);
-		
-		while(isNAN!=(nota)||nota>0||nota<10)
-		{
-			nota=prompt("nota");
-			nota=parseInt(nota);
-		}
-
-		if (nota<peornota) 
+		if (contador==1) 
 		{
 			
 			peornota=nota;
-			sexobajo=sexo;
-
-		}
-		if (edad>edadmayor) 
-		{
-			
-			edadmayor=edad;
-			viejo=alumno;
+			peorsexo=sexo;
 
 		}else
 		{
-			if (edad<edadmenor) 
+			if (nota<peornota) 
 			{
 				
-				edadmenor=edad;
-				chico=nota;
+				peornota=nota;
+				peorsexo=sexo;
 
 			}
 		}
-	
-		contador++;
-	}
-	
-	alert("La nota mas baja es un "+peornota+" y sexo "+sexobajo+", La persona mas vieja es "+viejo+" y por ultimo la nota del mas chico es "+chico);
 
+		if (nota<7&&sexo=="m") 
+		{
+
+			varones++;
+
+		}
+
+		suma=suma+nota;
+	}
+
+	promedio=suma/contador;
+
+	alert("El promedio es "+promedio+"\nLa nota mas baja es "+peornota+" y su sexo es "+peorsexo+"\nLa cantidad de varones desaprobados es "+varones);
 }

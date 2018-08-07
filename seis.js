@@ -16,17 +16,17 @@ function mostrar()
 
 			alert("es de mañana");
 			break;
-
+		
 		case 12:
 		case 13:
 		case 14:
 		case 15:
-		case 16:
+		case 16: 
 		case 17:
 		case 18:
 		case 19:
 
-			alert("es de tarde");
+			alert("Es de tarde");
 			break;
 
 		case 20:
@@ -34,17 +34,21 @@ function mostrar()
 		case 22:
 		case 23:
 		case 24:
-
-			alert("es de noche");
-			break;
-
 		case 1:
 		case 2:
-		case 3:
+		case 3: 
 		case 4:
 		case 5:
 
-			alert("a dormir");
+			alert("Es de noche");
+			if (hora<24) 
+			{
+				alert("a dormir")
+			}
+			break
+		default:
+
+			alert("Invalido");
 			break;
 	}
 }
